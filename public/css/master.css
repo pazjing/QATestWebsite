@@ -1,0 +1,26 @@
+
+/*-----------------------------------------------------------------------------------------
+	Footer section
+-----------------------------------------------------------------------------------------*/
+#contact-bar { background:#ff364d; padding:20px 20px 0;  }
+
+.symbol-email, .symbol-phone { font-size:24px; line-height:30px; display:inline-block; padding-left:40px; margin-bottom:20px; }
+
+.symbol-email { background:url(../images/email-symbol.png) center left no-repeat; margin-right:40px;  }
+.symbol-phone { background:url(../images/phone-symbol.png) center left no-repeat; }
+
+footer {  padding:70px 0 40px; }
+	footer .container { padding:0 20px; }
+	footer a:hover { text-decoration:underline; }
+	footer p { font-size:12px; line-height:16px; }
+	footer nav { font-size:12px; line-height:16px; margin-right:35px; }
+	footer nav li { font-size:12px; line-height:16px; }
+	footer nav.float-l { margin-bottom:90px; }
+		footer nav p { margin-bottom:7px; padding-bottom:7px; border-bottom:1px solid #fff; }
+		footer nav ul { width:205px; }
+
+		footer nav.platform, footer nav.services { width:445px; }
+
+		footer nav.company ul{ margin-right:35px; }
+		footer nav.company ul.last{ margin-right:0; }
+		footer nav li { margin-bottom:15px; }

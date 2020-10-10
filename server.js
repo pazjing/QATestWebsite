@@ -7,14 +7,20 @@ app.get('/index.html', function (req, res) {
 })
 
 app.get('/', function (req, res) {
-   res.send('Hello World');
+  // res.send('Hello World');
+   res.sendFile( __dirname + "/public/pages/" + "login.html" );
+})
+
+app.get('/landing', function (req, res) {
+  // res.send('Hello World');
+   res.sendFile( __dirname + "/public/pages/" + "landing.html" );
 })
 
 app.get('/process_get', function (req, res) {
    // Prepare output in JSON format
    response = {
-      first_name:req.query.first_name,
-      last_name:req.query.last_name
+      username:req.query.username,
+      password:req.password
    };
    console.log(response);
    res.end(JSON.stringify(response));
