@@ -2,9 +2,9 @@ var express = require('express');
 var app = express();
 
 app.use(express.static('public'));
-app.get('/index.html', function (req, res) {
-   res.sendFile( __dirname + "/public/pages/" + "index.html" );
-})
+// app.get('/index.html', function (req, res) {
+//    res.sendFile( __dirname + "/public/pages/" + "index.html" );
+// })
 
 app.get('/', function (req, res) {
   // res.send('Hello World');
@@ -13,14 +13,32 @@ app.get('/', function (req, res) {
 
 app.get('/landing', function (req, res) {
   // res.send('Hello World');
-   res.sendFile( __dirname + "/public/pages/" + "landing.html" );
+  parms = {
+     username:req.query.username,
+     password:req.query.password
+  };
+  if (parms.username != "ubiquity" || parms.password != "P@ss123#UbiQuity") {
+        res.redirect('/loginerror');
+  }
+  else {
+    res.sendFile( __dirname + "/public/pages/" + "landing.html" );
+  }
+})
+
+app.get('/loginerror', function (req, res) {
+  // res.send('Hello World');
+   res.sendFile( __dirname + "/public/pages/" + "loginerror.html" );
+})
+
+app.get('/editprofile', function (req, res) {
+   res.sendFile( __dirname + "/public/pages/" + "editprofile.html" );
 })
 
 app.get('/process_get', function (req, res) {
    // Prepare output in JSON format
    response = {
       username:req.query.username,
-      password:req.password
+      password:req.query.password
    };
    console.log(response);
    res.end(JSON.stringify(response));

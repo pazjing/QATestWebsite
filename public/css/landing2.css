@@ -1,0 +1,26 @@
+#me li a {
+    padding: 7.5px 10px;
+    border-radius: 3px;
+    color: #E6E6E6;
+    text-decoration: none;
+}
+#me {
+    float: right;
+    margin-right: -10px;
+    padding: 21.5px 0;
+}
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+#header-inner {
+    z-index: 3;
+    position: relative;
+    height: 60px;
+    font-size: 13px;
+}
