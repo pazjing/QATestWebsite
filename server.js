@@ -25,6 +25,12 @@ app.get('/landing', function (req, res) {
   }
 })
 
+app.get('/index', function (req, res) {
+  // res.send('Hello World');
+   res.sendFile( __dirname + "/public/pages/" + "landing.html" );
+})
+
+
 app.get('/loginerror', function (req, res) {
   // res.send('Hello World');
    res.sendFile( __dirname + "/public/pages/" + "loginerror.html" );
